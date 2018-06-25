@@ -1,0 +1,20 @@
+<h1>Results Page!!!</h1>
+ 
+<% if (data == null) { %>
+<p>No results. Please try refining your search terms.</p>
+<% } else { %>
+ 
+<ul>
+    <% data["Search"].forEach(function(movie) { %>
+    <li>
+        <strong>
+            <%= movie["Title"] %>
+        </strong>
+        - <%=movie["Year"]%>
+    </li>
+    <% }) %>
+</ul>
+ 
+<% } %>
+ 
+<a href="/">Search Again!</a>
